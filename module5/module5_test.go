@@ -10,13 +10,13 @@ import (
 )
 
 func TestModule5goimportsContent(t *testing.T) {
-	expected := "\"fmt\""
+	expected := "fmt"
 	found := OpenFileAndFindNthString("./module5_code.go", 0, expected)
 	if found != true {
 		t.Errorf("the fmt package is not found")
 	}
 
-	expected = "\"net/http\""
+	expected = "net/http"
 	found = OpenFileAndFindNthString("./module5_code.go", 0, expected)
 	if found != true {
 		t.Errorf("the net/http package is not found")
