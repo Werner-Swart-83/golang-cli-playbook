@@ -3,7 +3,6 @@ package module1
 import (
 	"bufio"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -85,7 +84,6 @@ func OpenFileAndFindNthString(filename string, nth int, expected string) bool {
 		ss := strings.Split(trimmed, "=")
 
 		if strings.Contains(ss[nth], expected) {
-			fmt.Println(ss[nth], expected)
 			return true
 		}
 	}
